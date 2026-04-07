@@ -31,7 +31,14 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] Feature-first boundary is preserved (`src/features/*` owns domain logic; `app/*` only orchestration)
+- [ ] Reuse placement is explicit (`packages/lib_shared` for cross-app/shared capability; no app-specific code in shared)
+- [ ] Public API discipline is defined (`index.ts` exports; no planned deep imports to private internals)
+- [ ] Data layering is respected (`Page -> Hook -> Service -> Repository -> API Client`)
+- [ ] State strategy is explicit (TanStack Query for server state, scoped Zustand/Context for shared client state, local UI state stays local by default)
+- [ ] Styling follows token governance (no hardcoded visual literals; Tailwind v4 used as consumption layer)
+- [ ] Shared UI impact is covered (Storybook contract updates and accessibility smoke checks when applicable)
+- [ ] Delivery gates are planned (lint, typecheck, test baseline, build all required before merge)
 
 ## Project Structure
 
@@ -49,46 +56,26 @@ specs/[###-feature]/
 
 ### Source Code (repository root)
 <!--
-  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
-  for this feature. Delete unused options and expand the chosen structure with
-  real paths (e.g., apps/admin, packages/something). The delivered plan must
-  not include Option labels.
+  ACTION REQUIRED: Replace this baseline tree with concrete paths for the
+  affected app(s) and package(s). The delivered plan must use real directories.
 -->
 
 ```text
-# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
-src/
-├── models/
-├── services/
-├── cli/
-└── lib/
-
-tests/
-├── contract/
-├── integration/
-└── unit/
-
-# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
-backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
-
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
-
-# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
-
-ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
+apps/
+├── <app_name>/
+│   ├── src/
+│   │   ├── app/
+│   │   │   └── core/
+│   │   └── features/
+│   └── e2e/
+packages/
+└── lib_shared/
+    └── src/
+        ├── ui/
+        ├── theme/
+        ├── hooks/
+        ├── modules/
+        └── testing/
 ```
 
 **Structure Decision**: [Document the selected structure and reference the real

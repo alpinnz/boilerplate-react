@@ -95,6 +95,38 @@
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
+## Constitution Alignment *(mandatory)*
+
+### Architecture & Boundaries
+
+- Feature placement: [Identify `apps/<app>/src/features/<feature>` target and ownership boundary]
+- Shared extraction: [List reusable parts that MUST live in `packages/lib_shared` or state why none]
+- Public API: [Define `index.ts` exports and confirm no deep-import dependency on private internals]
+
+### Data & State Strategy
+
+- Server state: [List TanStack Query hooks/keys and invalidation approach]
+- Client state: [List Zustand/Context stores (feature/app/shared) and why scope is justified]
+- Local UI state: [List critical local states that remain in component scope]
+
+### API Contract & Validation
+
+- Layering: [Confirm `Page -> Hook -> Service -> Repository -> API Client` usage]
+- Validation: [List critical responses validated with schema parsing (e.g., Zod)]
+- Error model: [Describe normalized error shape consumed by UI]
+
+### Token & Styling Compliance
+
+- Token path: [Map semantic/component token usage for this feature]
+- Tailwind usage: [State utilities/variants plan; confirm no hardcoded visual literals]
+- Theme impact: [List required mode/brand checks if affected]
+
+### Testing & Quality Gates
+
+- Planned tests: [Unit, contract, integration, Storybook, E2E scope for this feature]
+- Regression policy: [How known bug paths get mandatory coverage]
+- CI gates: [Confirm lint, typecheck, test, build pass criteria]
+
 ### Key Entities *(include if feature involves data)*
 
 - **[Entity 1]**: [What it represents, key attributes without implementation]
