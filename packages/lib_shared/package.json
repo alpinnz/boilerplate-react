@@ -1,0 +1,38 @@
+{
+  "name": "@repo/lib_shared",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "echo \"lib_shared build placeholder\"",
+    "lint": "echo \"lint config pending\"",
+    "test": "vitest run --environment jsdom --passWithNoTests",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./theme.css": "./src/theme/css/theme-global.css"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.72.1",
+    "axios": "^1.9.0",
+    "zod": "^3.24.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "^18.3.21",
+    "@types/react-dom": "^18.3.6",
+    "jsdom": "^26.0.0",
+    "msw": "^2.11.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
