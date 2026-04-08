@@ -1,0 +1,18 @@
+{
+  "name": "boilerplate-react",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "yarn@4.13.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "check:boundaries": "node scripts/check-boundaries.mjs",
+    "check:cycles": "echo \"Circular dependency check placeholder\"",
+    "lint": "yarn workspaces foreach -A --exclude boilerplate-react --topological-dev run lint",
+    "typecheck": "yarn workspaces foreach -A --exclude boilerplate-react --topological-dev run typecheck",
+    "test": "yarn workspaces foreach -A --exclude boilerplate-react --topological-dev run test",
+    "build": "yarn workspaces foreach -A --exclude boilerplate-react --topological-dev run build"
+  }
+}
