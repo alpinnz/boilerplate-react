@@ -1,0 +1,10 @@
+.platform-home-page {
+  padding: var(--space-lg);
+}
+
+.theme-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}

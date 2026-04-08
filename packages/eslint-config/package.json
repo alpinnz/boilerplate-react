@@ -1,0 +1,13 @@
+{
+  "name": "@repo/eslint-config",
+  "private": true,
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "echo \"lint config pending\"",
+    "test": "vitest run --passWithNoTests"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}

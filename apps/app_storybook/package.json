@@ -1,0 +1,24 @@
+{
+  "name": "@apps/app_storybook",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "echo \"storybook app shell placeholder\"",
+    "build": "echo \"storybook build placeholder\"",
+    "typecheck": "echo \"storybook typecheck placeholder\"",
+    "lint": "echo \"storybook lint placeholder\"",
+    "test": "echo \"storybook test placeholder\"",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.21",
+    "@types/react-dom": "^18.3.6",
+    "storybook": "^8.5.0"
+  }
+}
