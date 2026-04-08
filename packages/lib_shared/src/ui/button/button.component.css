@@ -1,0 +1,51 @@
+.shared-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--button-foreground, #ffffff);
+  background: var(--button-background, var(--color-action-primary));
+  transition: background-color 150ms ease, box-shadow 150ms ease;
+}
+
+.shared-button:hover:not(:disabled) {
+  background: var(--button-background-hover, var(--color-action-primary-hover));
+}
+
+.shared-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-action-primary) 25%, transparent);
+}
+
+.shared-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.shared-button[data-variant='secondary'] {
+  --button-background: var(--color-background-surface);
+  --button-background-hover: color-mix(in srgb, var(--color-background-surface) 80%, var(--color-action-primary));
+  --button-foreground: var(--color-text-primary);
+  border-color: var(--color-border-subtle);
+}
+
+.shared-button[data-variant='danger'] {
+  --button-background: var(--color-state-error);
+  --button-background-hover: color-mix(in srgb, var(--color-state-error) 85%, black);
+  --button-foreground: #ffffff;
+}
+
+.shared-button[data-variant='success'] {
+  --button-background: var(--color-state-success);
+  --button-background-hover: color-mix(in srgb, var(--color-state-success) 85%, black);
+  --button-foreground: #ffffff;
+}
+
+.shared-button[data-loading='true'] {
+  cursor: progress;
+}

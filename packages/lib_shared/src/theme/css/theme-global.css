@@ -1,0 +1,68 @@
+:root {
+  --color-background-canvas: #ffffff;
+  --color-background-surface: #eef6f9;
+  --color-text-primary: #0f2730;
+  --color-border-subtle: #b8d4df;
+  --color-action-primary: #0a7ea4;
+  --color-action-primary-hover: #085f7c;
+  --color-state-success: #107d53;
+  --color-state-error: #b22f2f;
+  --font-size-base: 16px;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+}
+
+:root[data-color='access'] {
+  --color-background-canvas: #ffffff;
+  --color-background-surface: #eef6f9;
+  --color-text-primary: #0f2730;
+  --color-border-subtle: #b8d4df;
+  --color-action-primary: #0a7ea4;
+  --color-action-primary-hover: #085f7c;
+  --color-state-success: #107d53;
+  --color-state-error: #b22f2f;
+}
+
+:root[data-color='accounting'] {
+  --color-background-canvas: #ffffff;
+  --color-background-surface: #eefaf6;
+  --color-text-primary: #0f3024;
+  --color-border-subtle: #b9dfd3;
+  --color-action-primary: #1a936f;
+  --color-action-primary-hover: #106a50;
+  --color-state-success: #0a7a54;
+  --color-state-error: #b33d2e;
+}
+
+:root[data-color='pocket'] {
+  --color-background-canvas: #ffffff;
+  --color-background-surface: #fff5e8;
+  --color-text-primary: #33210a;
+  --color-border-subtle: #f0cf9d;
+  --color-action-primary: #ff8f00;
+  --color-action-primary-hover: #c36a00;
+  --color-state-success: #1e8f5e;
+  --color-state-error: #b33d2e;
+}
+
+:root[data-color='wireframe'] {
+  --color-background-canvas: #ffffff;
+  --color-background-surface: #f3f4f6;
+  --color-text-primary: #111827;
+  --color-border-subtle: #d1d5db;
+  --color-action-primary: #4b5563;
+  --color-action-primary-hover: #374151;
+  --color-state-success: #10b981;
+  --color-state-error: #ef4444;
+}
+
+:root[data-typography='mobile'] {
+  --font-size-base: 15px;
+}
+
+:root[data-foundation='mobile'] {
+  --space-md: 0.875rem;
+  --space-lg: 1.25rem;
+}
